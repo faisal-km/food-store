@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="icon" href="public/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Food Store - Menyediakan makanan lezat seperti pizza, burger, dan pasta dengan pengiriman cepat. Pesan sekarang dan rasakan kelezatannya!">
+    <meta name="keywords" content="food, store, pizza, burger, pasta, delivery, makanan, pesan antar">
+    <meta name="author" content="Faisal Khoiri Muzakki">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Food Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart"></i> Keranjang (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Keranjang -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Keranjang Belanja</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cart-items" class="list-group mb-3"></ul>
+                    <h5>Total: Rp <span id="cart-total">0</span></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lanjut Belanja</button>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section (Carousel) -->
+    <header id="home" class="hero bg-dark text-light text-center py-5">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="public/img/hero-pizza.jpg" class="d-block w-100" alt="Pizza">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Selamat Datang di Toko Makanan Terbaik</h1>
+                        <p>Makanan lezat hanya dengan beberapa klik.</p>
+                        <a href="#menu" class="btn btn-primary mt-3">Lihat Menu</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="public/img/hero-burger.jpg" class="d-block w-100" alt="Burger">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Pizza, Burger, dan Lainnya</h1>
+                        <p>Pesan sekarang, dapatkan harga spesial.</p>
+                        <a href="#menu" class="btn btn-primary mt-3">Lihat Menu</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="public/img/hero-pasta.jpg" class="d-block w-100" alt="Pasta">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Kelezatan Otentik</h1>
+                        <p>Makanan yang dikemas dengan cinta dan kualitas.</p>
+                        <a href="#menu" class="btn btn-primary mt-3">Lihat Menu</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center">Menu Kami</h2>
+            <div class="row justify-content-center">
+                <!-- Kartu Menu Pizza -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="public/img/pizza.jpg" class="card-img-top" alt="Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza</h5>
+                            <p class="card-text">Pizza yang lezat dan segar.</p>
+                            <a href="#" class="btn btn-primary add-to-cart">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu Menu Burger -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="public/img/burger.jpg" class="card-img-top" alt="Burger">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger</h5>
+                            <p class="card-text">Burger yang juicy dan penuh rasa.</p>
+                            <a href="#" class="btn btn-primary add-to-cart">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu Menu Pasta -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="public/img/pasta.jpg" class="card-img-top" alt="Pasta">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasta</h5>
+                            <p class="card-text">Pasta dengan saus yang kaya rasa.</p>
+                            <a href="#" class="btn btn-primary add-to-cart">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Checkout -->
+    <form id="checkout-form" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Alamat Pengiriman</label>
+            <input type="text" class="form-control" id="address" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">No. Telepon</label>
+            <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Proses Pembayaran</button>
+    </form>
+
+    <!-- Ulasan Pengguna -->
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Ulasan Pengguna</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>"Makanannya enak banget, pengiriman cepat!"</p>
+                        <footer class="blockquote-footer">Andi, Jakarta</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>"Harga terjangkau dan kualitas luar biasa."</p>
+                        <footer class="blockquote-footer">Budi, Surabaya</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p>"Sangat puas dengan pelayanan dan makanannya."</p>
+                        <footer class="blockquote-footer">Siti, Bandung</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-light text-dark py-4 text-center">
+        <div class="container">
+            <p>Contact us at <a href="mailto:info@foodstore.com">info@foodstore.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="public/js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

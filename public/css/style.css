@@ -1,0 +1,126 @@
+/* Global styles */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Warna latar belakang netral */
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+#menu h2 {
+    margin-bottom: 2rem;
+    color: #343a40; /* Warna judul menu */
+}
+
+.card {
+    margin-top: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #c0392b; /* Merah tua */
+}
+
+/* Button */
+.btn-primary {
+    background-color: #ff5722; /* Oranye terang */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19; /* Warna saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #2ecc71; /* Hijau */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Ulasan Pengguna */
+#reviews {
+    background-color: #f9f9f9; /* Warna terang yang netral */
+    padding: 3rem 0; /* Tambahkan padding */
+}
+
+/* Animasi Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi ke bagian menu */
+#menu .card {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+/* Form Validasi */
+form.needs-validation .form-control:invalid {
+    border-color: #dc3545; /* Merah untuk invalid */
+}
+form.needs-validation .form-control:valid {
+    border-color: #28a745; /* Hijau untuk valid */
+}
+
+/* Hover pada tombol */
+.btn-primary:hover {
+    background-color: #ff5722;
+    border-color: #ff5722;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover pada kartu */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Merah tua */
+    color: white;
+}
+
+/* Tambahkan efek hover pada tombol */
+.btn-primary {
+    background-color: #e67e22; /* Oranye terang */
+    border-color: #e67e22;
+}
+
+/* Warna navbar dan hero yang lebih menarik */
+.navbar {
+    background-color: #343a40; /* Warna navbar */
+}
+
+.hero {
+    opacity: 0; /* Tambahkan opacity untuk animasi */
+}
